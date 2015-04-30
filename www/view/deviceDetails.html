@@ -1,0 +1,18 @@
+<ion-view view-title="Details">
+    <ion-content class="padding">
+        <div class="list card">
+            <div class="item item-divider">
+                {{deviceDetails.realName}}
+            </div>
+            <div class="item" style="vertical-align: middle;">
+                <img ng-src="{{deviceDetails.image}}">
+            </div>
+            <div class="item item-text-wrap">
+                {{deviceDetails.longDescription}}
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer">
+        <a class="button button-calm" href="#/main">Back to main</a>
+    </div>
+</ion-view>

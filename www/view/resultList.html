@@ -1,0 +1,16 @@
+<ion-view view-title="Results">
+    <ion-content class="padding">
+        <div class="list" ng-repeat="device in deviceList | limitTo:5">
+            <a class="item item-thumbnail-left">
+                <img ng-src="http://img.bbystatic.com/BestBuy_US/images/products/{{device.sku | limitTo: 4}}/{{device.sku}}_s.gif" style="height: 80px; width: auto;">
+                <h2>{{device.name}}</h2>
+                <p>Price: {{device.price}}</p>
+                <button class="button button-calm" ng-click="showDetails(device)">View details</button>
+            </a>
+        </div>
+        <div class="item"></div>
+    </ion-content>
+    <div class="bar bar-footer">
+        <a class="button button-calm" href="#/main">Back to main</a>
+    </div>
+</ion-view>

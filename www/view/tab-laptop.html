@@ -1,0 +1,16 @@
+<ion-view view-title="Laptops">
+    <ion-content class="padding">
+        <div class="list" ng-repeat="action in actions.laptops">
+            <span style="width: 200px;">{{action}}</span>
+            <span style="position: absolute; right: 5%;">{{label[rateLaptops[action] - 1]}}</span>
+            <div class="item range range-calm">
+                <input type="range" name="games" value="4" min="1" max="7" ng-model="rateLaptops[action]">
+            </div>
+        </div>
+        <div class="item"></div>
+    </ion-content>
+    <div class="bar bar-footer">
+        <a class="button button-calm" href="#/main">Back to main</a>
+        <button class="button button-calm" ng-click="process()">Process</button>
+    </div>
+</ion-view>
