@@ -1,4 +1,6 @@
 /**
+ * Script that includes common Triangular Fuzzy Number operations used in the app.
+ *
  * Created by Victor on 24/04/2015.
  */
 var initTFN = function() {
@@ -38,11 +40,16 @@ var multiply = function(TFN, k) {
     }
 };
 
+/**
+ * Function that return cumulative sum of a Triangular Fuzzy Number Array.
+ * @param   {array}   arrayTFN          Array containing Triangular Fuzzy Numbers
+ * @returns {Triangular Fuzzy Number}   Cumulative Sum of the Triangular Fuzzy Number Array.
+ */
 var cumSum = function(arrayTFN) {
     var res = initTFN();
     for (var i = arrayTFN.length - 1; i >= 0; i--) {
         res = add(res, arrayTFN[i]);
-    };
+    }
     return res;
 };
 

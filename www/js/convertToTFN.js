@@ -368,9 +368,9 @@ var search = function (field, data, deviceType, flag) {
             if(!i && data < ranges[i].upperBound) break;
             if(ranges[i].lowerBound <= data && data < ranges[i].upperBound) break;
         }
-    };
+    }
     return map[i];
-}
+};
 
 var decode = function(data, deviceType) {
     var decodedData = {},
@@ -380,20 +380,7 @@ var decode = function(data, deviceType) {
     
     for (var i = 1; i < attr.length; i++) {
         decodedData[attr[i]] = search(attr[i], data[attr[i]], deviceType, (attr[i] === 'connectivity' || attr[i] === 'HDLevel') ? 'text' : '');
-    };
-    // decodedData.ram = search('ram', data.ram, deviceType);
-    // decodedData.internalStorage = search('internalStorage', data.internalStorage, deviceType);
-    // decodedData.externalStorage = search('externalStorage', data.externalStorage, deviceType);
-    // decodedData.connectivity = search('connectivity', data.connectivity, deviceType, 'text');
-    // decodedData.pixelDensity = search('pixelDensity', data.pixelDensity, deviceType);
-    // decodedData.HDLevel = search('HDLevel', data.HDLevel, deviceType, 'text');
-    // decodedData.screenSize = search('screenSize', data.screenSize, deviceType);
-    // decodedData.weight = search('weight', data.weight, deviceType);
-    // decodedData.price = search('price', data.price, deviceType);
-    // decodedData.batteryCapacity = search('batteryCapacity', data.batteryCapacity, deviceType);
-    // decodedData.batteryTalkTime = search('batteryTalkTime', data.batteryTalkTime, deviceType);
-    // decodedData.camera = search('camera', data.camera, deviceType);
-    // decodedData.frontCamera = search('frontCamera', data.frontCamera, deviceType);
+    }
     return decodedData;
 };
 
@@ -559,7 +546,7 @@ var componentWeight = {
         batteryLife: { batteryLife: 1},
         screenSize: { screenSize: 1}
     }
-}
+};
 
 var getDeviceCapability = function (TFNs, deviceType) {
     var deviceCapability = {},
@@ -572,15 +559,6 @@ var getDeviceCapability = function (TFNs, deviceType) {
         for(var j = 0; j < attr.length; j++) 
             if(compWeight[act[i]][attr[j]]) array.push(multiply(TFNs[attr[j]], compWeight[act[i]][attr[j]]));
         deviceCapability[act[i]] = cumSum(array);
-    };
-    // deviceCapability['games'] = cumSum([
-    //         multiply(TFNs['cpu'], componentWeight[deviceType]['games']['cpu']),
-    //         multiply(TFNs['ram'], componentWeight[deviceType]['games']['ram']),
-    //         multiply(TFNs['pixelDensity'], componentWeight[deviceType]['games']['pixelDensity']),
-    //         multiply(TFNs['HDLevel'], componentWeight[deviceType]['games']['HDLevel']),
-    //         multiply(TFNs['internalStorage'], componentWeight[deviceType]['games']['internalStorage']),
-    //         multiply(TFNs['externalStorage'], componentWeight[deviceType]['games']['externalStorage']),
-    //         multiply(TFNs['screenSize'], componentWeight[deviceType]['games']['screenSize']),
-    //     ]);
+    }
     return deviceCapability;
-}
+};
