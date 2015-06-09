@@ -1,0 +1,14 @@
+<ion-modal-view>
+    <ion-header-bar ng-class="mainClass.bar">
+        <h1 class="title">{{labels.theme}}</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-radio ng-repeat="thm in themes" ng-model="$parent.$parent.theme" ng-value="thm.value">
+                {{thm.name}}
+            </ion-radio>
+            <button ng-click="changeTheme(theme)">{{labels.select}}</button>
+            <button ng-click="closeThmModal()">{{labels.cancel}}</button>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

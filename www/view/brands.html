@@ -1,0 +1,18 @@
+<ion-view view-title="{{labels.brands}}">
+    <ion-content class="padding">
+        <!--<ion-checkbox class="ng-class:mainClass.checkbox" ng-model="checkAll" ng-click="selectAll()">Select All</ion-checkbox>-->
+        <br>
+        <ul class="list">
+            <li class="item item-checkbox ng-class:mainClass.checkbox" ng-repeat="brand in brandsList">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="brands[brand]" ng-click="updateSelectAll()">
+                </label>
+                {{brand}}<!-- - {{brands[brand]}}-->
+            </li>
+        </ul>
+    </ion-content>
+    <div class="bar bar-footer">
+        <a class="button ng-class:mainClass.button" href="#/main">{{labels.backToMain}}</a>
+        <a class="button ng-class:mainClass.button" ng-click="saveBrands()">{{labels.next}}</a>
+    </div>
+</ion-view>

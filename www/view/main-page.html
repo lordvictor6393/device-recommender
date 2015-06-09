@@ -1,43 +1,23 @@
-<ion-view view-title="DEVICE RECOMMENDER">
-
-
+<ion-view view-title="{{labels.appTitle}}">
     <ion-content padding="true" class="has-header">
-        <h4 class="title">Looking for...</h4>
+        <h4 class="title">{{labels.lookFor}}</h4>
 
             <div class="buttons">
-                <a class="button button-block button-large button-calm" href="#/tab/laptop" ng-click="setDeviceType('laptops')">
-                    Laptops
+                <a class="button button-block button-large" ng-class="mainClass.button" href="#/tab/laptopBrands" ng-click="setDeviceType('laptops')">
+                    {{labels.laptops}}
                 </a>
-                <!--<a class="logo" href="#"
-                   tourtip="Angular Tour allows you to give an interactive tour to showcase the features of your website."
-                   tourtip-next-label="Learn more"
-                   tourtip-placement="right"
-                   tourtip-offset="60"
-                   tourtip-step="1"
-                   tourtip-redirect-to="none"></a>-->
-                <a class="button button-block button-large button-calm" href="#/tab/tablet" ng-click="setDeviceType('tablets')">
+                <a class="button button-block button-large" ng-class="mainClass.button" href="#/tab/tabletBrands" ng-click="setDeviceType('tablets')">
                     Tablets
                 </a>
-                <!--<a class="logo" href="#"
-                   tourtip="Angular Tour allows you to give an interactive tour to showcase the features of your website."
-                   tourtip-next-label="Learn more"
-                   tourtip-placement="right"
-                   tourtip-offset="60"
-                   tourtip-step="2"
-                   tourtip-redirect-to="none"></a>-->
-                <a class="button button-block button-large button-calm" href="#/tab/smartPhone" ng-click="setDeviceType('smartphones')">
-                    Smart Phones
+                <a class="button button-block button-large" ng-class="mainClass.button" href="#/tab/smartphoneBrands" ng-click="setDeviceType('smartphones')">
+                    {{labels.smartPhones}}
                 </a>
-                <!--<a class="logo" href="#"
-                   tourtip="Angular Tour allows you to give an interactive tour to showcase the features of your website."
-                   tourtip-next-label="Learn more"
-                   tourtip-placement="right"
-                   tourtip-offset="60"
-                   tourtip-step="3"
-                   tourtip-redirect-to="tab.smartPhone"></a>-->
                 <br><br>
-                <button class="button button-block button-large button-calm" onclick="navigator.app.exitApp()">
-                    Exit
+                <button class="button button-block button-large" ng-class="mainClass.button" ng-click="showOptions()">
+                    {{labels.options}}
+                </button>
+                <button class="button button-block button-large" ng-class="mainClass.button" onclick="navigator.app.exitApp()">
+                    {{labels.exit}}
                 </button>
             </div>
 

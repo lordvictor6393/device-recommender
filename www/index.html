@@ -34,17 +34,11 @@
         });
     </script>
     </head>
-    <body ng-app="starter">
-        <!-- temporally disabled
-            <tour step="currentStep">-->
-            <!--The nav bar that will be updated as we navigate between views.-->
-            <ion-nav-bar class="bar-calm">
+    <body ng-app="starter" ng-controller="mainController">
+            <ion-nav-bar class="ng-class:mainClass.bar">
                 <ion-nav-back-button></ion-nav-back-button>
             </ion-nav-bar>
 
-            <ion-nav-view>
-                <!--<a class="logo" href="#" tourtip="Angular Tour allows you to give an interactive tour to showcase the features of your website." tourtip-next-label="Learn more" tourtip-placement="right" tourtip-offset="60" tourtip-step="0" tourtip-redirect-to="none"></a>-->
-            </ion-nav-view>
-        <!--</tour>-->
+            <ion-nav-view></ion-nav-view>
     </body>
 </html>

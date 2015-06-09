@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-header-bar ng-class="mainClass.bar">
+        <h1 class="title">{{labels.languages}}</h1>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-radio ng-model="$parent.$parent.language" value="english">
+                {{labels.english}}
+            </ion-radio>
+            <ion-radio ng-model="$parent.$parent.language" value="spanish">
+                {{labels.spanish}}
+            </ion-radio>
+            <button ng-click="changeLanguage(language)">{{labels.select}}</button>
+            <button ng-click="closeOptModal()">{{labels.cancel}}</button>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

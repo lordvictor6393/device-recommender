@@ -1,15 +1,15 @@
-<ion-tabs class="tabs-calm tabs-icon-top">
+<ion-tabs class="tabs-icon-top" ng-class="mainClass.tab">
 
-    <ion-tab title="Laptops" icon-on="ion-laptop" icon-off="ion-laptop active" href="#/tab/laptop" on-select="setDeviceType('laptops')">
+    <ion-tab title="Laptops" icon-on="ion-laptop" icon-off="ion-laptop active" href="#/tab/laptopBrands">
         <ion-nav-view name="tab-laptop"></ion-nav-view>
     </ion-tab>
 
-    <ion-tab title="Tablets" icon-on="ion-ipad" icon-off="ion-ipad active" href="#/tab/tablet" on-select="setDeviceType('tablets')">
+    <ion-tab title="Tablets" icon-on="ion-ipad" icon-off="ion-ipad active" href="#/tab/tabletBrands">
         <ion-nav-view name="tab-tablet"></ion-nav-view>
     </ion-tab>
 
-    <ion-tab title="Smart Phones" icon-on="ion-iphone" icon-off="ion-iphone active" href="#/tab/smartPhone" on-select="setDeviceType('smartphones')">
-        <ion-nav-view name="tab-smartPhone"></ion-nav-view>
+    <ion-tab title="Smart Phones" icon-on="ion-iphone" icon-off="ion-iphone active" href="#/tab/smartphoneBrands">
+        <ion-nav-view name="tab-smartphone"></ion-nav-view>
     </ion-tab>
 
 </ion-tabs>

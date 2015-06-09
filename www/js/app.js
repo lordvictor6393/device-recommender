@@ -18,55 +18,130 @@ angular.module('starter', ['ionic', 'productControllers', 'productServices', 'an
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('top');
     $stateProvider
         .state('main', {
             url: '/main',
-            templateUrl: 'view/main-page.html'//,
-            //controller: 'mainController'
+            templateUrl: 'view/main-page.html',
+            controller: 'mainController'
         })
         .state('tab', {
             url: '/tab',
-            abstract: true,
+            //abstract: true,
             templateUrl: 'view/tabs.html',
             controller: 'tabController'
         })
-        .state('tab.laptop', {
-            url: '/laptop',
+        /***LAPTOP STATES***/
+        .state('tab.laptopBrands', {
+            url: '/laptopBrands',
             views: {
                 'tab-laptop': {
-                    templateUrl: 'view/tab-laptop.html'//,
-                    //controller: 'LaptopCtrl'
+                    templateUrl: 'view/brands.html',
+                    controller: 'laptopBrandController'
                 }
             }
         })
-        .state('tab.tablet', {
-            url: '/tablet',
+        .state('tab.laptopRates', {
+            url: '/laptopRates',
+            views: {
+                'tab-laptop': {
+                    templateUrl: 'view/rates.html',
+                    controller: 'laptopRatesController'
+                }
+            }
+        })
+        .state('tab.laptopResults', {
+            url: '/laptopResults',
+            views: {
+                'tab-laptop': {
+                    templateUrl: 'view/results.html',
+                    controller: 'laptopResultController'
+                }
+            }
+        })
+        .state('tab.laptopDetails', {
+            url: '/laptopDetails',
+            views: {
+                'tab-laptop': {
+                    templateUrl: 'view/details.html',
+                    controller: 'detailController'
+                }
+            }
+        })
+        /***TABLET STATES***/
+        .state('tab.tabletBrands', {
+            url: '/tabletBrands',
             views: {
                 'tab-tablet': {
-                    templateUrl: 'view/tab-tablet.html'//,
-                    //controller: 'TabletCtrl'
+                    templateUrl: 'view/brands.html',
+                    controller: 'tabletBrandController'
                 }
             }
         })
-        .state('tab.smartPhone', {
-            url: '/smartPhone',
+        .state('tab.tabletRates', {
+            url: '/tabletRates',
             views: {
-                'tab-smartPhone': {
-                    templateUrl: 'view/tab-smartPhone.html'//,
-                    //controller: 'SmartPhoneCtrl'
+                'tab-tablet': {
+                    templateUrl: 'view/rates.html',
+                    controller: 'tabletRatesController'
                 }
             }
         })
-        .state('resultList', {
-            url: '/resultList',
-            templateUrl: 'view/resultList.html',
-            controller: 'resultController'
+        .state('tab.tabletResults', {
+            url: '/tabletResults',
+            views: {
+                'tab-tablet': {
+                    templateUrl: 'view/results.html',
+                    controller: 'tabletResultController'
+                }
+            }
         })
-        .state('deviceDetails', {
-            url: '/deviceDetails',
-            templateUrl: 'view/deviceDetails.html',
-            controller: 'detailController'
+        .state('tab.tabletDetails', {
+            url: '/tabletDetails',
+            views: {
+                'tab-tablet': {
+                    templateUrl: 'view/details.html',
+                    controller: 'detailController'
+                }
+            }
+        })
+        /***SMARTPHONE STATES***/
+        .state('tab.smartphoneBrands', {
+            url: '/smartphoneBrands',
+            views: {
+                'tab-smartphone': {
+                    templateUrl: 'view/brands.html',
+                    controller: 'smartphoneBrandController'
+                }
+            }
+        })
+        .state('tab.smartphoneRates', {
+            url: '/smartphoneRates',
+            views: {
+                'tab-smartphone': {
+                    templateUrl: 'view/rates.html',
+                    controller: 'smartphoneRatesController'
+                }
+            }
+        })
+        .state('tab.smartphoneResults', {
+            url: '/smartphoneResults',
+            views: {
+                'tab-smartphone': {
+                    templateUrl: 'view/results.html',
+                    controller: 'smartphoneResultController'
+                }
+            }
+        })
+        .state('tab.smartphoneDetails', {
+            url: '/smartphoneDetails',
+            views: {
+                'tab-smartphone': {
+                    templateUrl: 'view/details.html',
+                    controller: 'detailController'
+                }
+            }
         });
 
         $urlRouterProvider.otherwise('main');

@@ -10,7 +10,7 @@ var attributes = {
                   'price', 'batteryLife', 'graphicsMemory', 'graphicsSpeed']
     };
 
-var action = {
+var action1 = {
         smartphones: ['games', 'download', 'phonecalls', 'surfWeb', 'socialNetwork', 
                       'takePhotos', 'price', 'weight', 'batteryCapacity', 'screenSize'],
         tablets: ['games', 'download', 'movies', 'readEBooks', 'surfWeb', 'socialNetwork', 'price',
@@ -18,6 +18,230 @@ var action = {
         laptops: ['games', 'music', 'download', 'movies', 'applicationProgramming', 'wordProcessing',
                   'dataAnalysis', 'graphicsHandling', 'price', 'weight', 'batteryLife', 'screenSize']
     };
+
+var action = {
+    smartphones: [{
+        id: 'games',
+        name: 'Games',
+        upperbound: 'High Quality Games',
+        lowerbound: 'Low Quality Games'
+    }, {
+        id: 'download',
+        name: 'Download Frequency',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'phonecalls',
+        name: 'Calls Frequency',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'surfWeb',
+        name: 'Internet Use',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'socialNetwork',
+        name: 'Social Networks Use',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'takePhotos',
+        name: 'Camera Quality',
+        upperbound: '12 Mpx',
+        lowerbound: 'VGA'
+    }, {
+        id: 'price',
+        name: 'Price',
+        upperbound: '1025 $',
+        lowerbound: '150 $'
+    }, {
+        id: 'weight',
+        name: 'Weight',
+        upperbound: '191 g',
+        lowerbound: '91 g'
+    }, {
+        id: 'batteryCapacity',
+        name: 'Battery Life',
+        upperbound: '20 h',
+        lowerbound: '3 h'
+    }, {
+        id: 'screenSize',
+        name: 'Screen Size',
+        upperbound: '5.8"',
+        lowerbound: '3.3"'
+    }],
+    tablets: [{
+        id: 'games',
+        name: 'Games',
+        upperbound: 'High Quality Games',
+        lowerbound: 'Low Quality Games'
+    }, {
+        id: 'download',
+        name: 'Download Frequency',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'movies',
+        name: 'Watching Movies',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'readEBooks',
+        name: 'Reading Electronic Books',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'surfWeb',
+        name: 'Internet Use',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'socialNetwork',
+        name: 'Social Networks Use',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'price',
+        name: 'Price',
+        upperbound: '2800 $',
+        lowerbound: '200 $'
+    }, {
+        id: 'weight',
+        name: 'Weight',
+        upperbound: '1150 g',
+        lowerbound: '97 g'
+    }, {
+        id: 'batteryCapacity',
+        name: 'Battery Life',
+        upperbound: '15 h',
+        lowerbound: '3 h'
+    }, {
+        id: 'screenSize',
+        name: 'Screen Size',
+        upperbound: '13"',
+        lowerbound: '3"'
+    }, {
+        id: 'takePhotos',
+        name: 'Camera Quality',
+        upperbound: '8.5 Mpx',
+        lowerbound: '1 Mpx'
+    }],
+    laptops: [{
+        id: 'games',
+        name: 'Games',
+        upperbound: 'High Quality Games',
+        lowerbound: 'Low Quality Games'
+    }, {
+        id: 'music',
+        name: 'Sound Quality',
+        upperbound: 'High Sound Quality',
+        lowerbound: 'Low Sound Quality'
+    }, {
+        id: 'download',
+        name: 'Download Frequency',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'movies',
+        name: 'Watching Movies',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'readEBooks',
+        name: 'Reading Electronic Books',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'surfWeb',
+        name: 'Internet Use',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'socialNetwork',
+        name: 'Social Networks Use',
+        upperbound: 'Very Often',
+        lowerbound: 'Hardly Ever'
+    }, {
+        id: 'price',
+        name: 'Price',
+        upperbound: '200 $',
+        lowerbound: '2800 $'
+    }, {
+        id: 'weight',
+        name: 'Weight',
+        upperbound: '97 g',
+        lowerbound: '1150 g'
+    }, {
+        id: 'batteryCapacity',
+        name: 'Battery Life',
+        upperbound: '3 h',
+        lowerbound: '15 h'
+    }, {
+        id: 'screenSize',
+        name: 'Screen Size',
+        upperbound: '3"',
+        lowerbound: '13"'
+    }, {
+        id: 'takePhotos',
+        name: 'Camera Quality',
+        upperbound: '1 Mpx',
+        lowerbound: '8.5 Mpx'
+    }]
+};
+
+var labels = {
+    spanish: {
+        appTitle: 'RECOMENDADOR DE DISPOSITIVOS',
+        lookFor: 'Estas buscando...',
+        laptops: 'Computadoras portatiles',
+        smartPhones: 'Telefonos Inteligentes',
+        options: 'Opciones',
+        exit: 'Salir',
+
+        changeLanguage: 'Cambiar Idioma',
+        changeTheme: 'Cambiar Color',
+
+        languages: 'Idiomas',
+        english: 'Ingles',
+        spanish: 'Español',
+        select: 'Seleccionar',
+        cancel: 'Cancelar',
+
+        theme: 'Colores',
+
+        brands: 'Marcas',
+        backToMain: 'Volver al Menu',
+        next: 'Siguiente',
+
+        scores: 'Puntuaciones'
+    },
+    english: {
+        appTitle: 'DEVICE RECOMMENDER',
+        lookFor: 'Looking for...',
+        laptops: 'Laptops',
+        smartPhones: 'Smart Phones',
+        options: 'Options',
+        exit: 'Exit',
+
+        changeLanguage: 'Change Language',
+        changeTheme: 'Change Theme',
+
+        languages: 'Laguages',
+        english: 'English',
+        spanish: 'Spanish',
+        select: 'Select',
+        cancel: 'Cancel',
+
+        theme: 'Themes',
+
+        brands: 'Brands',
+        backToMain: 'Back To Main',
+        next: 'Next',
+
+        scores: 'Scores'
+    }
+};
 
 var map = [
             { n1:0, n2:1, n3:2 }, // Very Low   (VL)
@@ -299,8 +523,8 @@ var comparizonRanges = {
                 {lowerBound: 1250, upperBound: 1500},
                 {lowerBound: 1500}
             ],
-            screenResolution: ['', '','1366 x 768', '1600 x 900', '1920 - 1080', '2560 x 1600', '3200 x 1800'],
-            sound: ['', '','', '-', '', 'jbl', 'beatsAudio'],
+            screenResolution: ['', '','1366 x 768', '1600 x 900', '1920 x 1080', '2560 x 1600', '3200 x 1800'],
+            sound: ['', '','', '-', 'DTS', 'jbl', 'beatsAudio'],
             screenSize: [
                 {               upperBound: 10},
                 {lowerBound: 10, upperBound: 11.5},
@@ -379,7 +603,7 @@ var decode = function(data, deviceType) {
     decodedData.cpu = add(multiply(search('cpuSpeed', data.cpuSpeed, deviceType), 0.7), multiply(search('cpuCores', data.cpuCores, deviceType), 0.3));
     
     for (var i = 1; i < attr.length; i++) {
-        decodedData[attr[i]] = search(attr[i], data[attr[i]], deviceType, (attr[i] === 'connectivity' || attr[i] === 'HDLevel') ? 'text' : '');
+        decodedData[attr[i]] = search(attr[i], data[attr[i]], deviceType, (attr[i] === 'connectivity' || attr[i] === 'HDLevel' || attr[i] === 'screenResolution' || attr[i] === 'sound') ? 'text' : '');
     }
     return decodedData;
 };
@@ -556,9 +780,10 @@ var getDeviceCapability = function (TFNs, deviceType) {
 
     for (var i = 0; i < act.length; i++) {
         var array = [];
-        for(var j = 0; j < attr.length; j++) 
-            if(compWeight[act[i]][attr[j]]) array.push(multiply(TFNs[attr[j]], compWeight[act[i]][attr[j]]));
-        deviceCapability[act[i]] = cumSum(array);
+        for(var j = 0; j < attr.length; j++) {
+            if(compWeight[act[i].id] && compWeight[act[i].id][attr[j]]) array.push(multiply(TFNs[attr[j]], compWeight[act[i].id][attr[j]]));
+        }
+        deviceCapability[act[i].id] = cumSum(array);
     }
     return deviceCapability;
 };

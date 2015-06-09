@@ -1,0 +1,19 @@
+<ion-view view-title="{{labels.scores}}">
+    <ion-content class="padding">
+        <div class="list" ng-repeat="action in actions">
+            <span style="width: 200px;">{{action.name}}</span>
+            <!--<span style="position: absolute; right: 5%;">{{label[rates[action.id] - 1]}}</span>-->
+            <div class="item range ng-class:mainClass.range">
+                <input type="range" name="games" value="4" min="1" max="7" ng-model="rates[action.id]">
+            </div>
+            <span style="position: absolute; left: 5%; border-bottom: 10px;">{{action.lowerbound}}</span>
+            <span style="position: absolute; right: 5%; border-bottom: 10px;">{{action.upperbound}}</span>
+            <br>
+        </div>
+        <div class="item" style="border-color: #FFF;"></div>
+    </ion-content>
+    <div class="bar bar-footer">
+        <a class="button ng-class:mainClass.button" href="#/main">Back to main</a>
+        <button class="button ng-class:mainClass.button" ng-click="process()">Process</button>
+    </div>
+</ion-view>

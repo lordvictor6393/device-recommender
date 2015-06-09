@@ -3,10 +3,41 @@
  */
 angular.module('productServices', [])
 .factory('dataService', function($http) {
-    var deviceType = '';
     var userChoice = [];
     var deviceData = '';
+    var brands = {};
     return {
+        setLanguage: function (newLanguage) {
+            window.localStorage['language'] = newLanguage;
+        },
+        getLanguage: function () {
+            return window.localStorage['language'] || 'english';
+        },
+
+        setClass: function (newClass) {
+            window.localStorage['appTheme'] = newClass;
+        },
+        getTheme: function () {
+            return window.localStorage['appTheme'] || 'calm';
+        },
+        getClass: function() {
+            var cls = window.localStorage['appTheme'] || 'calm';
+            return {
+                checkbox: 'checkbox-' + cls,
+                button: 'button-' + cls,
+                tab: 'tabs-' + cls,
+                bar: 'bar-' + cls,
+                range: 'range-' + cls
+            };
+        },
+
+        setBrands: function (brandsConfig) {
+            brands = brandsConfig;
+        },
+        getBrands: function () {
+            return brands;
+        },
+
         getDetails: function(sku) {
             return $http.get("http://api.remix.bestbuy.com/v1/products(sku=" + sku + ")?apiKey=bnzyqjavujrnqzqbrqbe43na&format=json");
         },
@@ -18,13 +49,6 @@ angular.module('productServices', [])
         },
         getSmartPhones: function () {
             return $http.get('data/smartphones.json');
-        },
-
-        setDevType: function (newDeviceType) {
-            deviceType = newDeviceType;
-        },
-        getDevType: function () {
-            return deviceType;
         },
 
         setUserRate: function (userRates) {

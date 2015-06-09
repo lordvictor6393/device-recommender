@@ -1,4 +1,4 @@
-<ion-view view-title="Results">
+<ion-view view-title="{{viewTitle}}">
     <ion-content class="padding">
         <div class="list" ng-repeat="device in deviceList | limitTo:5">
             <a class="item item-thumbnail-left">
@@ -8,7 +8,7 @@
                 <button class="button button-calm" ng-click="showDetails(device)">View details</button>
             </a>
         </div>
-        <div class="item"></div>
+        <div class="item" style="border-color: #FFF"></div>
     </ion-content>
     <div class="bar bar-footer">
         <a class="button button-calm" href="#/main">Back to main</a>
