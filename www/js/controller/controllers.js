@@ -78,9 +78,7 @@ angular.module('productControllers', [])
 })
 /********** LAPTOP CONTROLLERS **********/
 .controller('laptopBrandController', function ($scope, $state, dataService) {
-    var cls = dataService.getClass();
-    $scope.mainClass = cls;
-    dataService.setClass(cls);
+    $scope.mainClass = dataService.getClass();
     $scope.labels = labels[dataService.getLanguage()];
 
     var brands = {};
@@ -117,6 +115,9 @@ angular.module('productControllers', [])
     };
 })
 .controller('laptopRatesController', function ($scope, $state, $ionicLoading, $timeout, dataService) {
+    $scope.mainClass = dataService.getClass();
+    $scope.labels = labels[dataService.getLanguage()];
+
     var rates = {};
     var userChoice = {};
 
@@ -162,6 +163,9 @@ angular.module('productControllers', [])
     };
 })
 .controller('laptopResultController', function ($scope, $state, dataService) {
+    $scope.mainClass = dataService.getClass();
+    $scope.labels = labels[dataService.getLanguage()];
+
     var response = dataService.getLaptops();
     $scope.viewTitle = 'Results';
 
@@ -197,9 +201,7 @@ angular.module('productControllers', [])
 })
 /********** TABLET CONTROLLERS **********/
 .controller('tabletBrandController', function ($scope, $state, dataService) {
-    var cls = dataService.getClass();
-    $scope.mainClass = cls;
-    dataService.setClass(cls);
+    $scope.mainClass = dataService.getClass();
     $scope.labels = labels[dataService.getLanguage()];
 
     var brands = {};
@@ -234,6 +236,9 @@ angular.module('productControllers', [])
     };
 })
 .controller('tabletRatesController', function ($scope, $state, $ionicLoading, $timeout, dataService) {
+    $scope.mainClass = dataService.getClass();
+    $scope.labels = labels[dataService.getLanguage()];
+
     var rates = {};
     var userChoice = {};
 
@@ -280,8 +285,10 @@ angular.module('productControllers', [])
     };
 })
 .controller('tabletResultController', function ($scope, $state, dataService) {
-    var response = dataService.getTablets();
+    $scope.mainClass = dataService.getClass();
+    $scope.labels = labels[dataService.getLanguage()];
 
+    var response = dataService.getTablets();
     $scope.viewTitle = 'Tablet results';
 
     response.success(function (data) {
@@ -316,9 +323,7 @@ angular.module('productControllers', [])
 })
 /********** SMARTPHONE CONTROLLERS **********/
 .controller('smartphoneBrandController', function ($scope, $state, dataService) {
-    var cls = dataService.getClass();
-    $scope.mainClass = cls;
-    dataService.setClass(cls);
+    $scope.mainClass = dataService.getClass();
     $scope.labels = labels[dataService.getLanguage()];
 
     var brands = {};
@@ -353,6 +358,9 @@ angular.module('productControllers', [])
     };
 })
 .controller('smartphoneRatesController', function ($scope, $state, $ionicLoading, $timeout, dataService) {
+    $scope.mainClass = dataService.getClass();
+    $scope.labels = labels[dataService.getLanguage()];
+
     var rates = {};
     var userChoice = {};
 
@@ -398,6 +406,9 @@ angular.module('productControllers', [])
     };
 })
 .controller('smartphoneResultController', function ($scope, $state, dataService) {
+    $scope.mainClass = dataService.getClass();
+    $scope.labels = labels[dataService.getLanguage()];
+
     var response = dataService.getSmartPhones();
     $scope.viewTitle = 'Results';
 
@@ -433,6 +444,9 @@ angular.module('productControllers', [])
 })
 
 .controller('detailController', function($scope, dataService) {
+    $scope.mainClass = dataService.getClass();
+    $scope.labels = labels[dataService.getLanguage()];
+
     var data = dataService.getDeviceData();
     var details = dataService.getDetails(data.sku);
 

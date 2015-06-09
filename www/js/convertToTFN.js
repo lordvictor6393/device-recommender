@@ -15,8 +15,8 @@ var action1 = {
                       'takePhotos', 'price', 'weight', 'batteryCapacity', 'screenSize'],
         tablets: ['games', 'download', 'movies', 'readEBooks', 'surfWeb', 'socialNetwork', 'price',
                   'weight', 'batteryCapacity', 'screenSize', 'takePhotos'],
-        laptops: ['games', 'music', 'download', 'movies', 'applicationProgramming', 'wordProcessing',
-                  'dataAnalysis', 'graphicsHandling', 'price', 'weight', 'batteryLife', 'screenSize']
+        laptops: ['games', 'music', 'download', 'movies', 'wordProcessing', 'graphicsHandling',
+                  'price', 'weight', 'batteryLife', 'screenSize']
     };
 
 var action = {
@@ -148,45 +148,35 @@ var action = {
         upperbound: 'Very Often',
         lowerbound: 'Hardly Ever'
     }, {
-        id: 'readEBooks',
-        name: 'Reading Electronic Books',
+        id: 'wordProcessing',
+        name: 'Write Documents',
         upperbound: 'Very Often',
         lowerbound: 'Hardly Ever'
     }, {
-        id: 'surfWeb',
-        name: 'Internet Use',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'socialNetwork',
-        name: 'Social Networks Use',
+        id: 'graphicsHandling',
+        name: 'Graphic Design & Video Edition',
         upperbound: 'Very Often',
         lowerbound: 'Hardly Ever'
     }, {
         id: 'price',
         name: 'Price',
-        upperbound: '200 $',
-        lowerbound: '2800 $'
+        upperbound: '2900 $',
+        lowerbound: '400 $'
     }, {
         id: 'weight',
         name: 'Weight',
-        upperbound: '97 g',
-        lowerbound: '1150 g'
+        upperbound: '3500 g',
+        lowerbound: '1500 g'
     }, {
         id: 'batteryCapacity',
         name: 'Battery Life',
-        upperbound: '3 h',
-        lowerbound: '15 h'
+        upperbound: '15 h',
+        lowerbound: '2.5 h'
     }, {
         id: 'screenSize',
         name: 'Screen Size',
-        upperbound: '3"',
-        lowerbound: '13"'
-    }, {
-        id: 'takePhotos',
-        name: 'Camera Quality',
-        upperbound: '1 Mpx',
-        lowerbound: '8.5 Mpx'
+        upperbound: '17.5"',
+        lowerbound: '10"'
     }]
 };
 
@@ -741,12 +731,6 @@ var componentWeight = {
             screenResolution: 0.15,
             screenSize: 0.15,
             ram: 0.05
-        },
-        applicationProgramming: {
-            cpu: 0.35,
-            screenSize: 0.2,
-            ram: 0.35,
-            hardDrive: 0.1
         },
         wordProcessing: {
             cpu: 0.9,
