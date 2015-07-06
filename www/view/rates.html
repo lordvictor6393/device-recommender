@@ -6,14 +6,14 @@
             <div class="item range ng-class:mainClass.range">
                 <input type="range" name="games" value="4" min="1" max="7" ng-model="rates[action.id]">
             </div>
-            <span style="position: absolute; left: 5%; border-bottom: 10px;">{{action.lowerbound}}</span>
-            <span style="position: absolute; right: 5%; border-bottom: 10px;">{{action.upperbound}}</span>
-            <br>
+            <span style="position: absolute; left: 5%; border-bottom: 10px; width: 35%;">{{action.lowerbound}}</span>
+            <span style="position: absolute; right: 5%; border-bottom: 10px;  width: 35%; text-align: right;">{{action.upperbound}}</span>
+            <br><br>
         </div>
         <div class="item" style="border-color: #FFF;"></div>
     </ion-content>
     <div class="bar bar-footer">
         <a class="button ng-class:mainClass.button" href="#/main">{{labels.backToMain}}</a>
-        <button class="button ng-class:mainClass.button" ng-click="process()">Process</button>
+        <button class="button ng-class:mainClass.button" ng-click="process()">{{labels.process}}</button>
     </div>
 </ion-view>

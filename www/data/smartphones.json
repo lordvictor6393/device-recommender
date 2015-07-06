@@ -1,5 +1,5 @@
 [{ 
-    "sku": 7618012, 
+    "sku": 4426014,
     "name": "Samsung Galaxy S6",
     "brand": "Samsung",
     "cpuSpeed": 2.1, 
@@ -37,7 +37,7 @@
     "camera": 13,             
     "frontCamera": 2.1        
 }, { 
-    "sku": 7618012, 
+    "sku": 4426014,
     "name": "Samsung Galaxy S6 Edge",
     "brand": "Samsung",
     "cpuSpeed": 2.1,          
@@ -112,26 +112,7 @@
     "batteryTalkTime": 20,        
     "camera": 16,             
     "frontCamera": 3.7        
-}, { 
-    "sku": 6425022, 
-    "name": "LG Nexus 5",
-    "brand": "LG",
-    "cpuSpeed": 2.26,             
-    "cpuCores": 4,            
-    "ram": 2048,          
-    "internalStorage": 16,        
-    "externalStorage": 0,         
-    "connectivity": "4g",         
-    "pixelDensity": 445,      
-    "HDLevel": "1080",            
-    "screenSize": 4.95,       
-    "weight": 130,            
-    "price": 369.53,          
-    "batteryCapacity": 2300,  
-    "batteryTalkTime": 17,        
-    "camera": 8,          
-    "frontCamera": 1.3        
-}, { 
+}, {
     "sku": 3135008, 
     "name": "Motorola Moto G",
     "brand": "Motorola",

@@ -73,7 +73,7 @@ angular.module('productControllers', [])
 .controller('tabController', function($scope, $state, dataService, $ionicLoading, $timeout) {
     var cls = dataService.getClass();
     $scope.mainClass = cls;
-
+    $scope.labels = labels[dataService.getLanguage()];
     $scope.label = ['Very Low', 'Low', 'Medium Low', 'Medium', 'Medium High', 'High', 'Very High'];
 })
 /********** LAPTOP CONTROLLERS **********/
@@ -122,9 +122,9 @@ angular.module('productControllers', [])
     var userChoice = {};
 
     $scope.viewTitle = 'Laptops';
-    $scope.actions = action.laptops;
+    $scope.actions = getActions(dataService.getLanguage()).laptops;
 
-    for(var i = 0; i < action['laptops'].length; i++) rates[action['laptops'][i].id] = 4;
+    for(var i = 0; i < $scope.actions.length; i++) rates[$scope.actions[i].id] = 4;
     $scope.rates = rates;
 
     var show = function() {
@@ -139,7 +139,7 @@ angular.module('productControllers', [])
             '<div class="side side6"></div>' +
             '</div>' +
             '</div>' +
-            '<div style="text-align: center; margin: 150px auto 0px auto; font-size: 20px;">Processing...</div>',
+            '<div style="text-align: center; margin: 150px auto 0px auto; font-size: 20px;">' + labels[dataService.getLanguage()].processing + '</div>',
             animation: 'fade-in',
             showBackdrop: true,
             maxWidth: 200
@@ -167,7 +167,6 @@ angular.module('productControllers', [])
     $scope.labels = labels[dataService.getLanguage()];
 
     var response = dataService.getLaptops();
-    $scope.viewTitle = 'Results';
 
     response.success(function (data) {
         var brands = dataService.getBrands();
@@ -187,7 +186,7 @@ angular.module('productControllers', [])
                 for(var attr in deviceCapability) {
                     result += getEFNC(deviceCapability[attr], userChoice[attr]);
                 }
-                compatibility.push({sku: data[i].sku, score: result, name: data[i].name, price: data[i].price});
+                compatibility.push({sku: data[i].sku, score: result, name: data[i].name, price: data[i].price, local: data[i]});
             }
         }
         compatibility.sort(function(a,b){return a.score - b.score});
@@ -244,9 +243,9 @@ angular.module('productControllers', [])
 
     $scope.viewTitle = 'Tablet';
 
-    $scope.actions = action.tablets;
+    $scope.actions = getActions(dataService.getLanguage()).tablets;
 
-    for(var i = 0; i < action['tablets'].length; i++) rates[action['tablets'][i].id] = 4;
+    for(var i = 0; i < $scope.actions.length; i++) rates[$scope.actions[i].id] = 4;
     $scope.rates = rates;
 
     var show = function() {
@@ -261,7 +260,7 @@ angular.module('productControllers', [])
             '<div class="side side6"></div>' +
             '</div>' +
             '</div>' +
-            '<div style="text-align: center; margin: 150px auto 0px auto; font-size: 20px;">Processing...</div>',
+            '<div style="text-align: center; margin: 150px auto 0px auto; font-size: 20px;">' + labels[dataService.getLanguage()].processing + '</div>',
             animation: 'fade-in',
             showBackdrop: true,
             maxWidth: 200
@@ -289,7 +288,6 @@ angular.module('productControllers', [])
     $scope.labels = labels[dataService.getLanguage()];
 
     var response = dataService.getTablets();
-    $scope.viewTitle = 'Tablet results';
 
     response.success(function (data) {
         var brands = dataService.getBrands();
@@ -309,7 +307,7 @@ angular.module('productControllers', [])
                 for (var attr in deviceCapability) {
                     result += getEFNC(deviceCapability[attr], userChoice[attr]);
                 }
-                compatibility.push({sku: data[i].sku, score: result, name: data[i].name, price: data[i].price});
+                compatibility.push({sku: data[i].sku, score: result, name: data[i].name, price: data[i].price, local: data[i]});
             }
         }
         compatibility.sort(function(a,b){return a.score - b.score});
@@ -365,9 +363,9 @@ angular.module('productControllers', [])
     var userChoice = {};
 
     $scope.viewTitle = 'Smart Phones';
-    $scope.actions = action.smartphones;
+    $scope.actions = getActions(dataService.getLanguage()).smartphones;
 
-    for(var i = 0; i < action['smartphones'].length; i++) rates[action['smartphones'][i].id] = 4;
+    for(var i = 0; i < $scope.actions.length; i++) rates[$scope.actions[i].id] = 4;
     $scope.rates = rates;
 
     var show = function() {
@@ -382,7 +380,7 @@ angular.module('productControllers', [])
             '<div class="side side6"></div>' +
             '</div>' +
             '</div>' +
-            '<div style="text-align: center; margin: 150px auto 0 auto; font-size: 20px;">Processing...</div>',
+            '<div style="text-align: center; margin: 150px auto 0 auto; font-size: 20px;">' + labels[dataService.getLanguage()].processing + '</div>',
             animation: 'fade-in',
             showBackdrop: true,
             maxWidth: 200
@@ -410,7 +408,6 @@ angular.module('productControllers', [])
     $scope.labels = labels[dataService.getLanguage()];
 
     var response = dataService.getSmartPhones();
-    $scope.viewTitle = 'Results';
 
     response.success(function (data) {
         var brands = dataService.getBrands();
@@ -430,7 +427,7 @@ angular.module('productControllers', [])
                 for (var attr in deviceCapability) {
                     result += getEFNC(deviceCapability[attr], userChoice[attr]);
                 }
-                compatibility.push({sku: data[i].sku, score: result, name: data[i].name, price: data[i].price});
+                compatibility.push({sku: data[i].sku, score: result, name: data[i].name, price: data[i].price, local: data[i]});
             }
         }
         compatibility.sort(function(a,b){return a.score - b.score});
@@ -454,6 +451,7 @@ angular.module('productControllers', [])
 
     details.success(function(response1) {
         response1.products[0].realName = data.name;
+        response1.products[0].local = data.local;
         $scope.deviceDetails = response1.products[0];
         console.log(response1.products[0]);
     });

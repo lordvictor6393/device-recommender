@@ -19,165 +19,174 @@ var action1 = {
                   'price', 'weight', 'batteryLife', 'screenSize']
     };
 
-var action = {
-    smartphones: [{
-        id: 'games',
-        name: 'Games',
-        upperbound: 'High Quality Games',
-        lowerbound: 'Low Quality Games'
-    }, {
-        id: 'download',
-        name: 'Download Frequency',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'phonecalls',
-        name: 'Calls Frequency',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'surfWeb',
-        name: 'Internet Use',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'socialNetwork',
-        name: 'Social Networks Use',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'takePhotos',
-        name: 'Camera Quality',
-        upperbound: '12 Mpx',
-        lowerbound: 'VGA'
-    }, {
-        id: 'price',
-        name: 'Price',
-        upperbound: '1025 $',
-        lowerbound: '150 $'
-    }, {
-        id: 'weight',
-        name: 'Weight',
-        upperbound: '191 g',
-        lowerbound: '91 g'
-    }, {
-        id: 'batteryCapacity',
-        name: 'Battery Life',
-        upperbound: '20 h',
-        lowerbound: '3 h'
-    }, {
-        id: 'screenSize',
-        name: 'Screen Size',
-        upperbound: '5.8"',
-        lowerbound: '3.3"'
-    }],
-    tablets: [{
-        id: 'games',
-        name: 'Games',
-        upperbound: 'High Quality Games',
-        lowerbound: 'Low Quality Games'
-    }, {
-        id: 'download',
-        name: 'Download Frequency',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'movies',
-        name: 'Watching Movies',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'readEBooks',
-        name: 'Reading Electronic Books',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'surfWeb',
-        name: 'Internet Use',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'socialNetwork',
-        name: 'Social Networks Use',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'price',
-        name: 'Price',
-        upperbound: '2800 $',
-        lowerbound: '200 $'
-    }, {
-        id: 'weight',
-        name: 'Weight',
-        upperbound: '1150 g',
-        lowerbound: '97 g'
-    }, {
-        id: 'batteryCapacity',
-        name: 'Battery Life',
-        upperbound: '15 h',
-        lowerbound: '3 h'
-    }, {
-        id: 'screenSize',
-        name: 'Screen Size',
-        upperbound: '13"',
-        lowerbound: '3"'
-    }, {
-        id: 'takePhotos',
-        name: 'Camera Quality',
-        upperbound: '8.5 Mpx',
-        lowerbound: '1 Mpx'
-    }],
-    laptops: [{
-        id: 'games',
-        name: 'Games',
-        upperbound: 'High Quality Games',
-        lowerbound: 'Low Quality Games'
-    }, {
-        id: 'music',
-        name: 'Sound Quality',
-        upperbound: 'High Sound Quality',
-        lowerbound: 'Low Sound Quality'
-    }, {
-        id: 'download',
-        name: 'Download Frequency',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'movies',
-        name: 'Watching Movies',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'wordProcessing',
-        name: 'Write Documents',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'graphicsHandling',
-        name: 'Graphic Design & Video Edition',
-        upperbound: 'Very Often',
-        lowerbound: 'Hardly Ever'
-    }, {
-        id: 'price',
-        name: 'Price',
-        upperbound: '2900 $',
-        lowerbound: '400 $'
-    }, {
-        id: 'weight',
-        name: 'Weight',
-        upperbound: '3500 g',
-        lowerbound: '1500 g'
-    }, {
-        id: 'batteryCapacity',
-        name: 'Battery Life',
-        upperbound: '15 h',
-        lowerbound: '2.5 h'
-    }, {
-        id: 'screenSize',
-        name: 'Screen Size',
-        upperbound: '17.5"',
-        lowerbound: '10"'
-    }]
+var action = {};
+
+var getActions = function (language) {
+    var EN = language === 'english' ? true : false;
+
+    var acts = {
+        smartphones: [{
+            id: 'games',
+            name: EN ? 'Games' : 'Juegos',
+            upperbound: EN ? 'High Quality Games' : 'Juegos con buena calidad de graficos',
+            lowerbound: EN ? 'Low Quality Games' : 'Juegos con baja calidad de graficos'
+        }, {
+            id: 'download',
+            name: EN ? 'Download Frequency' : 'Frecuencia de descarga',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'phonecalls',
+            name: EN ? 'Calls Frequency' : 'Frecuencia de llamadas',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'surfWeb',
+            name: EN ? 'Internet Use' : 'Navegar por internet',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'socialNetwork',
+            name: EN ? 'Social Networks Use' : 'Uso de Redes Sociales',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'takePhotos',
+            name: EN ? 'Camera Resolution' : 'Resolución de cámara',
+            upperbound: '12 Mpx',
+            lowerbound: 'VGA'
+        }, {
+            id: 'price',
+            name: EN ? 'Price' : 'Precio',
+            upperbound: '1025 $',
+            lowerbound: '150 $'
+        }, {
+            id: 'weight',
+            name: EN ? 'Weight' : 'Peso',
+            upperbound: '191 g',
+            lowerbound: '91 g'
+        }, {
+            id: 'batteryCapacity',
+            name: EN ? 'Battery Life' : 'Duración batería',
+            upperbound: '20 h',
+            lowerbound: '3 h'
+        }, {
+            id: 'screenSize',
+            name: EN ? 'Screen Size' : 'Tamaño de la pantalla',
+            upperbound: '5.8"',
+            lowerbound: '3.3"'
+        }],
+        tablets: [{
+            id: 'games',
+            name: EN ? 'Games' : 'Juegos',
+            upperbound: EN ? 'High Quality Games' : 'Juegos con buena calidad de graficos',
+            lowerbound: EN ? 'Low Quality Games' : 'Juegos con baja calidad de graficos'
+        }, {
+            id: 'download',
+            name: EN ? 'Download Frequency' : 'Frecuencia de descarga',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'movies',
+            name: EN ? 'Watching Movies' : 'Ver peliculas',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'readEBooks',
+            name: EN ? 'Reading Electronic Books' : 'Leer libros electrónicos',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'surfWeb',
+            name: EN ? 'Internet Use' : 'Navegar por internet',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'socialNetwork',
+            name: EN ? 'Social Networks Use' : 'Uso de redes sociales',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'price',
+            name: EN ? 'Price' : 'Precio',
+            upperbound: '2800 $',
+            lowerbound: '200 $'
+        }, {
+            id: 'weight',
+            name: EN ? 'Weight' : 'Peso',
+            upperbound: '1150 g',
+            lowerbound: '97 g'
+        }, {
+            id: 'batteryCapacity',
+            name: EN ? 'Battery Life' : 'Duración de la Batería',
+            upperbound: '15 h',
+            lowerbound: '3 h'
+        }, {
+            id: 'screenSize',
+            name: EN ? 'Screen Size' : 'Tamaño de la pantalla',
+            upperbound: '13"',
+            lowerbound: '3"'
+        }, {
+            id: 'takePhotos',
+            name: EN ? 'Camera Resolution' : 'Resolución de la cámara',
+            upperbound: '8.5 Mpx',
+            lowerbound: '1 Mpx'
+        }],
+        laptops: [{
+            id: 'games',
+            name: EN ? 'Games' : 'Juegos',
+            upperbound: EN ? 'High Quality Games' : 'Juegos con buena calidad de graficos',
+            lowerbound: EN ? 'Low Quality Games' : 'Juegos con baja calidad de graficos'
+        }, {
+            id: 'music',
+            name: EN ? 'Sound Quality' : 'Calidad de sonido',
+            upperbound: EN ? 'High Sound Quality' : 'Alta calidad de sonido',
+            lowerbound: EN ? 'Low Sound Quality' : 'Baja calidad de sonido'
+        }, {
+            id: 'download',
+            name: EN ? 'Download Frequency' : 'Frecuencia de descarga',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'movies',
+            name: EN ? 'Watching Movies' : 'Ver peliculas',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'wordProcessing',
+            name: 'Write Documents',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'graphicsHandling',
+            name: 'Graphic Design & Video Edition',
+            upperbound: EN ? 'Very Often' : 'Muy frecuente',
+            lowerbound: EN ? 'Hardly Ever' : 'Rara Vez'
+        }, {
+            id: 'price',
+            name: EN ? 'Price' : 'Precio',
+            upperbound: '2900 $',
+            lowerbound: '400 $'
+        }, {
+            id: 'weight',
+            name: EN ? 'Weight' : 'Peso',
+            upperbound: '3500 g',
+            lowerbound: '1500 g'
+        }, {
+            id: 'batteryCapacity',
+            name: EN ? 'Battery Life' : 'Duración de la Batería',
+            upperbound: '15 h',
+            lowerbound: '2.5 h'
+        }, {
+            id: 'screenSize',
+            name: EN ? 'Screen Size' : 'Tamaño de la pantalla',
+            upperbound: '17.5"',
+            lowerbound: '10"'
+        }]
+    };
+
+    action = acts;
+    return acts;
 };
 
 var labels = {
@@ -204,7 +213,14 @@ var labels = {
         backToMain: 'Volver al Menu',
         next: 'Siguiente',
 
-        scores: 'Puntuaciones'
+        scores: 'Puntuaciones',
+        process: 'Procesar',
+        processing: 'Procesando...',
+
+        results: 'Dispositivos recomendados',
+        moreDetails: 'Mas detalles',
+
+        details: 'Detalles'
     },
     english: {
         appTitle: 'DEVICE RECOMMENDER',
@@ -229,7 +245,14 @@ var labels = {
         backToMain: 'Back To Main',
         next: 'Next',
 
-        scores: 'Scores'
+        scores: 'Scores',
+        process: 'Process',
+        processing: 'Processing...',
+
+        results: 'Recommended Devices',
+        moreDetails: 'More Details',
+
+        details: 'Details'
     }
 };
 

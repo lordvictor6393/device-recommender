@@ -50,23 +50,6 @@
     "camera": 2.1,              
     "frontCamera": 8         
 }, {
-    "sku": 9317016,
-    "name": "Amazon Fire HD 7",
-    "brand": "Kindle",
-    "cpuSpeed": 1.5,          
-    "cpuCores": 4,            
-    "ram": 1000,              
-    "internalStorage": 16,    
-    "externalStorage": 0,    
-    "connectivity": "2g",     
-    "pixelDensity": 216,      
-    "screenSize": 7,        
-    "weight": 337,            
-    "price": 119,             
-    "batteryCapacity": 2150,  
-    "camera": 2,              
-    "frontCamera": 1.3         
-}, {
     "sku": 4255061,
     "name": "Acer Iconia W4",
     "brand": "Acer",

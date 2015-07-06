@@ -7,8 +7,10 @@
             <ion-radio ng-repeat="thm in themes" ng-model="$parent.$parent.theme" ng-value="thm.value">
                 {{thm.name}}
             </ion-radio>
-            <button ng-click="changeTheme(theme)">{{labels.select}}</button>
-            <button ng-click="closeThmModal()">{{labels.cancel}}</button>
         </ion-list>
     </ion-content>
+    <div class="bar bar-footer">
+        <button class="button ng-class:mainClass.button" ng-click="changeTheme(theme)">{{labels.select}}</button>
+        <button class="button ng-class:mainClass.button" ng-click="closeThmModal()">{{labels.cancel}}</button>
+    </div>
 </ion-modal-view>

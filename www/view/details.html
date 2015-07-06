@@ -1,4 +1,4 @@
-<ion-view view-title="{{viewTitle}}">
+<ion-view view-title="{{labels.details}}">
     <ion-content class="padding">
         <div class="list card">
             <div class="item item-divider">
@@ -8,11 +8,29 @@
                 <img ng-src="{{deviceDetails.image}}">
             </div>
             <div class="item item-text-wrap">
-                {{deviceDetails.longDescription}}
+                <div>{{deviceDetails.local.brand ? 'Brand: ' + deviceDetails.local.brand : ''}}</div>
+                <div>{{deviceDetails.local.cpuSpeed ? 'CPU Speed: ' + deviceDetails.local.cpuSpeed + ' GHz' : ''}}</div>
+                <div>{{deviceDetails.local.cpuCores ? 'CPU Cores: ' + deviceDetails.local.cpuCores : ''}}</div>
+                <div>{{deviceDetails.local.ram ? 'RAM Memory: ' + deviceDetails.local.ram + ' GB' : ''}}</div>
+                <div>{{deviceDetails.local.hardDrive ? 'Hard Drive: ' + deviceDetails.local.hardDrive + ' GB' : ''}}</div>
+                <div>{{deviceDetails.local.internalStorage ? 'Internal Storage: ' + deviceDetails.local.internalStorage + ' GB' : ''}}</div>
+                <div>{{deviceDetails.local.externalStorage ? 'External Storage: ' + deviceDetails.local.externalStorage + ' GB' : ''}}</div>
+                <div>{{deviceDetails.local.sound && deviceDetails.local.sound != '-' ? 'Sound: ' + deviceDetails.local.sound : ''}}</div>
+                <div>{{deviceDetails.local.screenResolution ? 'Screen Resolution: ' + deviceDetails.local.screenResolution + ' Pixels' : ''}}</div>
+                <div>{{deviceDetails.local.HDLevel ? 'HD Level: ' + deviceDetails.local.HDLevel + ' Pixels' : ''}}</div>
+                <div>{{deviceDetails.local.screenSize ? 'Screen Size: ' + deviceDetails.local.screenSize + '"' : ''}}</div>
+                <div>{{deviceDetails.local.pixelDensity ? 'Pixel Density: ' + deviceDetails.local.pixelDensity + ' ppi' : ''}}</div>
+                <div>{{deviceDetails.local.weight ? 'Weight: ' + deviceDetails.local.weight + ' g' : ''}}</div>
+                <div>{{deviceDetails.local.price ? 'Price: ' + deviceDetails.local.price + ' $' : ''}}</div>
+                <div>{{deviceDetails.local.batteryLife ? 'Battery Life: ' + deviceDetails.local.batteryLife + ' h' : ''}}</div>
+                <div>{{deviceDetails.local.graphicsMemory ? 'Graphics Memory: ' + deviceDetails.local.graphicsMemory + ' GB' : ''}}</div>
+                <div>{{deviceDetails.local.graphicsSpeed ? 'Graphics Speed: ' + deviceDetails.local.graphicsSpeed + ' GHz' : ''}}</div>
+                <div>{{deviceDetails.local.camera ? 'Camera: ' + deviceDetails.local.camera + ' MegaPixels' : ''}}</div>
+                <div>{{deviceDetails.local.frontCamera ? 'Front Camera: ' + deviceDetails.local.frontCamera + ' MegaPixels' : ''}}</div>
             </div>
         </div>
     </ion-content>
     <div class="bar bar-footer">
-        <a class="button ng-class:mainClass.button" href="#/main">Back to main</a>
+        <a class="button ng-class:mainClass.button" href="#/main">{{labels.backToMain}}</a>
     </div>
 </ion-view>

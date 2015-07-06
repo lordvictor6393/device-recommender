@@ -15,22 +15,6 @@
   "graphicsMemory": 0.5,
   "graphicsSpeed": 0.95
 }, {
-  "sku": 6863116,
-  "name": "Toshiba - Satellite Laptop de 14''",
-  "brand": "Toshiba",
-  "cpuSpeed": 1.7,
-  "cpuCores": 4,
-  "ram": 6000,
-  "hardDrive": 750,
-  "screenResolution": "1920 x 1080",
-  "sound": "DTS",
-  "screenSize": 14,
-  "weight": 2041,
-  "price": 569.99,
-  "batteryLife": 3,
-  "graphicsMemory": 0.5,
-  "graphicsSpeed": 0.95
-}, {
   "sku": 8532029,
   "name": "MacBook Pro Retina 13.3''",
   "brand": "MacBook",
@@ -47,22 +31,6 @@
   "graphicsMemory": 1,
   "graphicsSpeed": 1.1
 }, {
-  "sku": 2850129,
-  "name": "CyberPowerPC Laptop de 15.6''",
-  "brand": "CyberPowerPC",
-  "cpuSpeed": 2.5,
-  "cpuCores": 8,
-  "ram": 16000,
-  "hardDrive": 1128,
-  "screenResolution": "2560 x 1600",
-  "sound": "jbl",
-  "screenSize": 15.6,
-  "weight": 2267.96,
-  "price": 1149.99,
-  "batteryLife": 4,
-  "graphicsMemory": 2.5,
-  "graphicsSpeed": 2
-}, {
   "sku": 6128119,
   "name": "Toshiba - Radius Laptop de 15.6''",
   "brand": "Toshiba",
@@ -78,22 +46,6 @@
   "batteryLife": 4,
   "graphicsMemory": 0.5,
   "graphicsSpeed": 0.95
-}, {
-  "sku": 3488102,
-  "name": "Asus - ROG Laptop de 17.3''",
-  "brand": "Asus",
-  "cpuSpeed": 2.4,
-  "cpuCores": 8,
-  "ram": 32000,
-  "hardDrive": 1512,
-  "screenResolution": "1920 x 1080",
-  "sound": "-",
-  "screenSize": 17.3,
-  "weight": 3810.17,
-  "price": 2849.99,
-  "batteryLife": 4,
-  "graphicsMemory": 2,
-  "graphicsSpeed": 2.5
 }, {
   "sku": 7175033,
   "name": "MSI - GT80 Titan Laptop de 18.4''",
@@ -142,20 +94,4 @@
   "batteryLife": 4,
   "graphicsMemory": 0.5,
   "graphicsSpeed": 0.95
-}, {
-  "sku": 6947008,
-  "name": "CybertronPC - Titan Laptop de 17.3''",
-  "brand": "CybertronPC",
-  "cpuSpeed": 2.8,
-  "cpuCores": 8,
-  "ram": 32000,
-  "hardDrive": 1240,
-  "screenResolution": "1920 x 1080",
-  "sound": "-",
-  "screenSize": 17.3,
-  "weight": 3583.38,
-  "price": 2599.99,
-  "batteryLife": 5,
-  "graphicsMemory": 2,
-  "graphicsSpeed": 2.5
 }]

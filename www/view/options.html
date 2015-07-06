@@ -10,8 +10,10 @@
             <ion-radio ng-model="$parent.$parent.language" value="spanish">
                 {{labels.spanish}}
             </ion-radio>
-            <button ng-click="changeLanguage(language)">{{labels.select}}</button>
-            <button ng-click="closeOptModal()">{{labels.cancel}}</button>
         </ion-list>
     </ion-content>
+    <div class="bar bar-footer">
+        <button class="button ng-class:mainClass.button" ng-click="changeLanguage(language)">{{labels.select}}</button>
+        <button class="button ng-class:mainClass.button" ng-click="closeOptModal()">{{labels.cancel}}</button>
+    </div>
 </ion-modal-view>

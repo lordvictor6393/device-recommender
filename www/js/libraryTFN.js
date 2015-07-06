@@ -15,14 +15,6 @@ var add = function(TFN1, TFN2) {
     };
 };
 
-var substract = function(TFN1, TFN2) {
-    return {
-        n1: TFN1.n1 - TFN2.n1,
-        n2: TFN1.n2 - TFN2.n2,
-        n3: TFN1.n3 - TFN2.n3
-    };
-};
-
 var multiply = function(TFN, k) {
     if(TFN.constructor === Array) {
         var res = [];
